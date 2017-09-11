@@ -1,6 +1,8 @@
 #include "NanoCanvas.h"
 #include "nanovg.h"
 
+using std::isnan;
+
 namespace NanoCanvas
 {
 
