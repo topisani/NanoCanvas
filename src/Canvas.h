@@ -2,7 +2,7 @@
 #define CANVAS_H
 
 #include <functional>
-class NVGcontext;
+struct NVGcontext;
 
 namespace NanoCanvas
 {
