@@ -529,7 +529,7 @@ namespace NanoCanvas
     }
 
 /*---------------- Canvas Control -----------------*/
-    Canvas& Canvas::begineFrame(int windowWidth, int windowHeight)
+    Canvas& Canvas::beginFrame(int windowWidth, int windowHeight)
     {
         nvgBeginFrame(m_nvgCtx,windowWidth,windowHeight,m_scaleRatio);
         // Clip out side area

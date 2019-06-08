@@ -545,15 +545,15 @@ namespace NanoCanvas
         /**
          * @brief Begin drawing a new frame
          * 
-         * Calls to Canvas drawing API should be wrapped in begineFrame() & endFrame()
-         * begineFrame() defines the size of the window to render to in relation currently
+         * Calls to Canvas drawing API should be wrapped in beginFrame() & endFrame()
+         * beginFrame() defines the size of the window to render to in relation currently
          * set viewport (i.e. glViewport on GL backends). 
          * 
          * @param windowWidth Width of your window
          * @param windowHeight Height of your window
-         * @return The canvas to begine frame with
+         * @return The canvas to begin frame with
          */
-        Canvas& begineFrame(int windowWidth, int windowHeight);
+        Canvas& beginFrame(int windowWidth, int windowHeight);
         
         /**
          * @brief Cancels drawing the current frame.
