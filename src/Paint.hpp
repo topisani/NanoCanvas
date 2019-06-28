@@ -1,5 +1,7 @@
-#ifndef PAINT_HPP
-#define PAINT_HPP
+#pragma once
+
+#include "Color.hpp"
+#include "util.hpp"
 
 namespace NanoCanvas
 {
@@ -30,5 +32,3 @@ namespace NanoCanvas
         Color eColor = Colors::ZeroColor;
     };
 }
-
-#endif // PAINT_HPP

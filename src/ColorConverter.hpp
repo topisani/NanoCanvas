@@ -1,8 +1,10 @@
-#ifndef ColorConverter_H_
-#define ColorConverter_H_
+#pragma once
 
 #include <algorithm>
-namespace ColorConverter
+
+#include "util.hpp"
+
+namespace NanoCanvas::ColorConverter
 {
     using byte = unsigned char;
     
@@ -115,5 +117,3 @@ namespace ColorConverter
         // TODO:
     }
 };
-
-#endif //ColorConverter_H_

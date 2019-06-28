@@ -1,4 +1,6 @@
-#include "NanoCanvas.h"
+#include "Image.hpp"
+#include "Canvas.hpp"
+
 #include "nanovg.h"
 
 namespace NanoCanvas
