@@ -325,7 +325,8 @@ namespace NanoCanvas
          * @return The canvas to operate with
          */
         Canvas& globalAlpha(float alpha);
-        
+
+        Canvas& globalCompositeOperation(int op);
         
         /**
          * @brief Sets the color to fill the drawing

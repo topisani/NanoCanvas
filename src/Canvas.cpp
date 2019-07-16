@@ -87,6 +87,12 @@ namespace NanoCanvas
         return *this;
     }
 
+    Canvas& Canvas::globalCompositeOperation(int op)
+    {
+        nvgGlobalCompositeOperation(m_nvgCtx, op);
+        return *this;
+    }
+
     Canvas& Canvas::lineCap(LineCap cap)
     {
         int nvgCap = NVG_BUTT;
