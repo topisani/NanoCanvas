@@ -248,6 +248,28 @@ namespace NanoCanvas {
     return width;
   }
 
+
+  Canvas& Canvas::globalCompositeOperation(CompositeOperation op)
+  {
+    auto nvgOp = [&] {
+      switch (op) {
+      case CompositeOperation::SOURCE_OVER: return NVG_SOURCE_OVER;
+      case CompositeOperation::SOURCE_IN: return NVG_SOURCE_IN;
+      case CompositeOperation::SOURCE_OUT: return NVG_SOURCE_OUT;
+      case CompositeOperation::ATOP: return NVG_ATOP;
+      case CompositeOperation::DESTINATION_OVER: return NVG_DESTINATION_OVER;
+      case CompositeOperation::DESTINATION_IN: return NVG_DESTINATION_IN;
+      case CompositeOperation::DESTINATION_OUT: return NVG_DESTINATION_OUT;
+      case CompositeOperation::DESTINATION_ATOP: return NVG_DESTINATION_ATOP;
+      case CompositeOperation::LIGHTER: return NVG_LIGHTER;
+      case CompositeOperation::COPY: return NVG_COPY;
+      case CompositeOperation::XOR: return NVG_XOR;
+      }
+    }();
+    nvgGlobalCompositeOperation(m_nvgCtx, nvgOp);
+    return *this;
+  }
+
   /* ------------------- Basic Path ----------------------*/
 
   Canvas& Canvas::moveTo(float x, float y)

@@ -65,6 +65,20 @@ namespace NanoCanvas {
       MITER
     };
 
+    enum class CompositeOperation {
+      SOURCE_OVER,
+      SOURCE_IN,
+      SOURCE_OUT,
+      ATOP,
+      DESTINATION_OVER,
+      DESTINATION_IN,
+      DESTINATION_OUT,
+      DESTINATION_ATOP,
+      LIGHTER,
+      COPY,
+      XOR,
+    };
+
     /**
      * @brief Construct a canvas with NanoVG Context
      * @param ctx The NanoVG Context used for this canvas
@@ -589,6 +603,7 @@ namespace NanoCanvas {
     float measureText(const string& text, float x, float y, float* bounds, float rowWidth = NAN);
     Box measureText(const std::string& text, Point p, float rowWidth = NAN);
 
+    Canvas& globalCompositeOperation(CompositeOperation op);
 
     /*--------------------- Transformations ----------------*/
 
